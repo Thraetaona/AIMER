@@ -21,9 +21,9 @@ import numpy as np
 # TODO: Move these to a centralized configuration section or file.
 #
 NUM_CHOICES = int(4)
-NUM_QUESTIONS = int(4)
+NUM_QUESTIONS = int(5)
 # TODO: Make this more 'natural' and 1-based instead of 0-based.
-ANSWERS_KEY = list([0, 2, 3, 1])
+ANSWERS_KEY = list([0, 2, 3, 1, 0])
 
 # TODO: Merge these two functions.
 #
@@ -49,14 +49,15 @@ def display_gradings_on_paper(score, answers_provided, answers_key, paper):
     paper_height = paper.shape[0]
 
     # Properties of each cell in the overall grid.
-    cell_width = (paper_width // NUM_QUESTIONS) # Height // Questions
-    cell_height = (paper_height // NUM_CHOICES) # Width // Choices
+    cell_width = (paper_width // NUM_CHOICES) # Height // Questions
+    cell_height = (paper_height // NUM_QUESTIONS) # Width // Choices
 
 
     line_color = (255, 0, 0) # Blue
     line_thickness = 2
 
     # TODO: Maybe merge the two below for loops?
+    # TODO: Also, this would overflow beyond the image.
     #
     for step in range(0, NUM_QUESTIONS*NUM_CHOICES):
         # Vertical lines

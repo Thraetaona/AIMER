@@ -35,7 +35,7 @@ def sort_points(points):
     return sorted_points
 
 # Usually, the paper or document in an image, when compared with other objects (e.g., pens, erasers, etc), would be the largest shape.
-def find_largest_contour(contours):
+def find_largest_contours(contours):
     largest = np.array([])
 
     max_area = 0 # A variable to hold the highest area of each contour and check it against the next contour.
@@ -86,18 +86,19 @@ def scan(img):
     # Extracts all the shapes ("contours") from the image.
     contours, _hierarchy = cv.findContours(img, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
-    largest = find_largest_contour(contours) # Finds the largest contour.
-    if largest.size == 0: # No shapes were detected.
-        return np.zeros((HEIGHT, WIDTH, 3), np.uint8) # So, we return a blank image.
+    largest_countors = find_largest_contours(contours) # Finds the largest contour.
+    if largest_countors.size == 0: # No shapes were detected.
+        return img_original, np.zeros((HEIGHT, WIDTH, 3), np.uint8) # So, we return a blank image.
+    
+    img_bordered = img_original
+    cv.drawContours(img_bordered, [largest_countors.astype(int)], -1, (0, 255, 0), 2)
 
-
-    largest = sort_points(largest) # Sorts its points.
+    largest_countors = sort_points(largest_countors) # Sorts its points.
 
     # De-skew the image
-    src = np.float32(largest) # Coordinates of the largest shape (i.e., the paper or document).
+    src = np.float32(largest_countors) # Coordinates of the largest shape (i.e., the paper or document).
     dst = np.float32([[0, 0], [WIDTH, 0], [0, HEIGHT], [WIDTH, HEIGHT]]) # Same size as the resized img.
     matrix = cv.getPerspectiveTransform(src, dst)
-
     img_scanned = cv.warpPerspective(img_original, matrix, (WIDTH, HEIGHT))
 
 
@@ -105,9 +106,7 @@ def scan(img):
     img_scanned = img_scanned[MARGIN:img_scanned.shape[0]-MARGIN, MARGIN:img_scanned.shape[1]-MARGIN]
     img_scanned = cv.resize(img_scanned, (WIDTH, HEIGHT))
 
-    # TODO: make it completely black and white
-    #img_scanned = cv.adaptiveThreshold(img_scanned, 127, 255, cv.THRESH_BINARY)
+    # Anti-aliasing
     img_scanned = cv.medianBlur(img_scanned, 9)
-    #img_scanned = cv.adaptiveThreshold(img_scanned, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY, 11, 2)
 
-    return img_scanned
+    return img_bordered, img_scanned

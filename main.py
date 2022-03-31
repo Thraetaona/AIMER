@@ -30,26 +30,26 @@ cap = camera_driver.init_camera()
 
 def main():
     cv.namedWindow("webcam")
-    #cv.namedWindow("result")
-
     cv.namedWindow("graded")
 
-    image = None
+    img = None
     scanned = None
 
     #image = cv.imread("test.png", cv.IMREAD_GRAYSCALE)
 
     while True:
-        _ret, image = cap.read()
-        cv.imshow("webscam", image)
+        _ret, img = cap.read()
 
-        scanned = scanner.scan(image)
+        img, scanned_img = scanner.scan(img)
+        cv.imshow("webscam", img)
 
-        answers, graded = grader.grade(scanned)
-        cv.imshow("graded", graded)
+        score, graded_img = grader.grade(scanned_img)
+        cv.imshow("graded", graded_img)
 
         if (cv.waitKey(33) == ord('s')):
             break
+        
+    print("The final grade was: " + str(score) + "%")
 
 cv.destroyAllWindows()
 
