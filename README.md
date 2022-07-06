@@ -11,12 +11,16 @@
 ***
 
 # Background
-AIMER is an OCR (**O**ptical **C**haracter **R**ecognition) answer-sheet grader.  It was made and submitted as the "Performance Task" for the official College Board's exam of its [Advanced Placement Computer Science Principles](https://en.wikipedia.org/wiki/AP_Computer_Science_Principles) ("AP CSP") course.  It was evaluated by the College Board on July, 2022 towards a full 5/5 examination score; it has been publicized on this repository since then.
+AIMER is an OCR (**O**ptical **C**haracter **R**ecognition) answer-sheet grader.  It was mainly made and submitted for the "Performance Task" of the official College Board's exam of its [Advanced Placement Computer Science Principles](https://en.wikipedia.org/wiki/AP_Computer_Science_Principles) ("AP CSP") course.  It won a local high school programming competition that it was nominated for, and It was also evaluated by the College Board on July, 2022 towards a full 5/5 examination score; it has been publicized under a GPL-3.0 license at this repository since then.
 
 <p align="center" text-align="center"> <br />
-  <img width="400" height="200"
+  <img width="400" height="200" align="left"
     src="https://user-images.githubusercontent.com/42461518/177600798-be11f1d5-1e3b-4fc9-816a-2a4fe952ad03.png" 
     alt="A score report card of the AP Computer Science Principles' exam displaying a 5/5 score."
+  />
+  <img width="300" height="200" align="right"
+    src="https://user-images.githubusercontent.com/42461518/177618026-efedf72c-d02b-4585-96ce-5392d7b813ff.jpg" 
+    alt="A high school programming competition winning certificate."
   />
   <br />
   <sub>
@@ -24,6 +28,7 @@ AIMER is an OCR (**O**ptical **C**haracter **R**ecognition) answer-sheet grader.
   </sub>
 <br /> </p>
 
+<br /> <br />
 
 The name stands for "**A**rtificial **I**ntelligence **M**ark **E**valuator & **R**ecognizer," and although the "Artificial Intelligence" part is a bit of an exaggeration, it nonetheless employs the use of computer vision through OpenCV in order to achieve its goal.
 
