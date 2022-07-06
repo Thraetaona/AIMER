@@ -11,7 +11,7 @@
 ***
 
 # Background
-AIMER is an OCR (**O**ptical **C**haracter **R**ecognition) answer-sheet grader.  It was made and submitted as the "Performance Task" for the official College Board's exam of its [Advanced Placement Computer Science Principles](https://en.wikipedia.org/wiki/AP_Computer_Science_Principles) ("AP CSP") course.  It was evaluated by the College Board on July, 2022 towards a full 5/5 exam score.
+AIMER is an OCR (**O**ptical **C**haracter **R**ecognition) answer-sheet grader.  It was made and submitted as the "Performance Task" for the official College Board's exam of its [Advanced Placement Computer Science Principles](https://en.wikipedia.org/wiki/AP_Computer_Science_Principles) ("AP CSP") course.  It was evaluated by the College Board on July, 2022 towards a full 5/5 examination score; it has been publicized on this repository since then.
 
 <p align="center" text-align="center"> <br />
   <img width="400" height="200"
