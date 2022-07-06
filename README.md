@@ -22,10 +22,11 @@ AIMER is an OCR (**O**ptical **C**haracter **R**ecognition) answer-sheet grader.
     src="https://user-images.githubusercontent.com/42461518/177618026-efedf72c-d02b-4585-96ce-5392d7b813ff.jpg" 
     alt="A high school programming competition winning certificate."
   />
-  <br />
+  <span>
   <sub>
     Performance Tasks (e.g., AIMER) contribute 30% and up to 1.5 of the total score, while the remaining 70% are based on the answers to 70 multiple choice questions---all of which were, ironically, graded by a program similar to AIMER.
   </sub>
+  </span>
 <br /> </p>
 
 <br /> <br />
