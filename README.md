@@ -24,7 +24,7 @@ AIMER is an OCR (**O**ptical **C**haracter **R**ecognition) answer-sheet grader.
   />
   <br />
   <sub>
-    (The Performance Task (i.e., AIMER) contributes 30% and up to 1.5 of the total score, while the remaining 70% are based on the answers to 70 multiple choice questions---all of which were, ironically, graded by a program similar to AIMER.)
+    Performance Tasks (e.g., AIMER) contribute 30% and up to 1.5 of the total score, while the remaining 70% are based on the answers to 70 multiple choice questions---all of which were, ironically, graded by a program similar to AIMER.
   </sub>
 <br /> </p>
 
