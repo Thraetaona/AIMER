@@ -41,7 +41,7 @@ Then, simply connect a USB camera to your device and double-click the main.py fi
 Notice that the best results are achieved in a dimly lit environment---not overly bright and not too dark---on a background that is not the same color as the answer paper and has nothing other than said paper on it.
 
 Also, you may specify the numbers of questions and choices inside of the grader.py file by modifying the *NUM_QUESTIONS* and *NUM_CHOICES* global constants (in the below demo's case there were 4 choices and 5 questions.) \
-You could also change the ANSWER_KEYS global list to your liking, in our case the correct (key) answers were:
+You could also change the *ANSWER_KEYS* global list to your liking, in our case the correct (key) answers were:
 1. 1 (A)
 2. 3 (C)
 3. 4 (D)
