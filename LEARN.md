@@ -12,7 +12,14 @@
 
 # LEARN.md
 
-The [./digital_portfolio](https://github.com/Thraetaona/AIMER/tree/main/digital_portfolio) folder contains all the required technical and general explanations, it also includes a short video demo of AIMER in action.
+The [./digital_portfolio](./digital_portfolio) folder contains all the required technical and general explanations, it also includes a short video demo of AIMER in action.
+
+<object data="./digital_portfolio/written_responses.pdf?raw=true&sanitize=true" type="application/pdf" width="700px" height="700px">
+    <embed src="./digital_portfolio/written_responses.pdf?raw=true&sanitize=true">
+        <p>You could also view only the technical write-ups online <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/Thraetaona/AIMER/main/digital_portfolio/written_responses.pdf?raw=true&sanitize=true">at here</a>.</p>
+    </embed>
+</object>
+
 
 ---
 
